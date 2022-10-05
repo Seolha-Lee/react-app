@@ -5,7 +5,7 @@ class Contents extends Component {
         return(
             <article>
                 <h3>{this.props.title}</h3>
-                {this.props.cont}
+                {this.props.desc}
             </article>
         )
     }
