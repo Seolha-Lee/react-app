@@ -11,7 +11,8 @@ class App extends Component{
       mode:'welcome',
       subject:{title:'WEB', sub:'React'},
       welcome:{title:'Welcome', desc:'Hello, React!'},
-      contents:[{id:1, title:'HTML', desc:'HTML can be refered to bones.'},
+      contents:[
+      {id:1, title:'HTML', desc:'HTML can be refered to bones.'},
       {id:2, title:'CSS', desc:'CSS can be refered to skins.'},
       {id:3, title:'JS', desc:'JavaScript can be refered to organs.'}]
     }
@@ -28,7 +29,11 @@ class App extends Component{
   }
     return (
       <div className="App">
-        <Subject title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
+        <Subject title={this.state.subject.title} sub={this.state.subject.sub}
+        onChangePage={function(){
+          this.setState({mode:'welcome'});
+        }.bind(this)}
+        ></Subject>
         <Nav cont={this.state.contents}></Nav>
         <Contents title={_title} desc={_desc}></Contents>
       </div>
