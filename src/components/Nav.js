@@ -6,10 +6,10 @@ class Nav extends Component {
         , updatedprops.data
         , this.props.data
         )
-        if (this.props.data !== updatedprops.data){
-            return true
+        if (this.props.data === updatedprops.data){
+            return false
         }
-        return false
+        return true
     }
     render(){
         console.log('Navigation render')
