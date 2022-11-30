@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 class Create extends Component {
     render(){
+        console.log(`Create`)
         return(
             <article>
                 <h2>Create</h2>
